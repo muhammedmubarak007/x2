@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <style>
+        /* General body styling */
+        body {
+            background-color: #000000;
+    background-image: url("./assets/X2\ \(1\).png");
+    background-size: 807px 491px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+        }
+
+        /* Main container to hold the content */
+        .container {
+            position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 90%; */
+
+    height: 100%;
+    text-align: center;
+        }
+
+        /* Glowing circle as background */
+        .glowing-circle {
+            position: absolute;
+            width: 120px;
+            height: 0px;
+            background-color: red;
+            border-radius: 50%;
+            box-shadow: 0 0 80px 0px rgba(255, 0, 0, 0.7), 0 0 52px 0px rgba(255, 0, 0, 0.5), 0 0 136px 74px rgba(255, 0, 0, 0.3), 0 0 344px 52px rgba(255, 0, 0, 0.2);
+            z-index: 0;
+        }
+
+        /* Text content styling */
+        .content {
+            color: white;
+            z-index: 1; /* Ensure content appears above image and circle */
+            position: relative;
+        }
+
+        /* Main heading */
+        .center-text {
+            font-size: 80px;
+            font-weight: bold;
+            margin-top: 20px; /* Adjusted margin to create space */
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #FF6950;
+        }
+
+        /* Subheading text */
+        .subheading {
+            font-size: 20px;
+            font-weight: lighter;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        /* Button styling */
+        .button {
+            padding: 14px 35px;
+            font-size: 1.2em;
+            color: black;
+            background-color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Responsive design for smaller screens */
+        @media (max-width: 1280px) {
+            
+            .center-text {
+                font-size: 80px;
+            }
+
+            .subheading {
+                font-size: 20px;
+                margin-bottom: 40px;
+            }
+
+            .button {
+                font-size: 1.1em;
+                padding: 12px 30px;
+            }
+
+            .glowing-circle {
+        width: 100px;
+        height: 0px;
+    }
+        }
+
+        /* For very small devices */
+        @media (max-width: 768px) {
+            body{
+
+                background-size: 440px 280px;
+            }
+            .center-text {
+                font-size: 38.5px;
+                margin-bottom: 10px;
+            }
+
+            .subheading {
+                font-size: 11px;
+                margin-bottom: 25px;
+            }
+
+            .button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .glowing-circle {
+                width: 90px;
+                height: 0px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .center-text {
+                font-size: 38.5px;
+        margin-bottom: 15px;
+            }
+
+            .subheading {
+                font-size: 11px;
+        margin-bottom: 20px;
+            }
+
+            .button {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+
+            .glowing-circle {
+                width: 40px;
+                height: 0px;
+            }
+            .glowing-circle {
+    position: absolute;
+    background-color: red;
+    border-radius: 50%;
+    box-shadow: 0 0 80px 0px rgba(255, 0, 0, 0.7), 0 0 52px 0px rgba(255, 0, 0, 0.5), 0 0 136px 74px rgba(255, 0, 0, 0.3), 0 0 344px 52px rgba(255, 0, 0, 0.2);
+    z-index: 0;
+}
+body{
+
+    background-size: 350px 200px;
+}
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="glowing-circle"></div>
+
+        <div class="content">
+            <div class="center-text">
+                Book Your <span class="highlight">Tickets</span><br> Now!
+            </div>
+            <div class="subheading">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus<br> 
+                imperdiet sed id elementum. Quam vel aliquam sit vulputate.<br> 
+                Faucibus nec gravida ipsum pulvinar vel.
+            </div>
+            <a href="#" class="button">Book Now</a>
+        </div>
+    </div>
+</body>
+</html>
